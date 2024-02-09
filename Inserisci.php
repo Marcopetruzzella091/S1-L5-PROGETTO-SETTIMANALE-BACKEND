@@ -1,5 +1,5 @@
 <?php 
- include_once('Header.php'); 
+ 
  include_once('config.php'); 
 
  session_start();
@@ -13,13 +13,13 @@
 
 
  session_write_close(); 
- 
+ include_once('Header.php'); 
  ?>
 
 
 
     
-?>
+
 <!-- NEL FORM FACCIO UN PRIMO CONTROLLO SUI DATI ASSICURANDOMI DI GUIDARE L'UTENTE NELL'INSERIMENTO CORRETTO
 QUINDI NON SARA' POSSIBILI INSERIRE UN ANNO OLTRE IL 2024, UN PREZZO NON DECIMALE, UNA VALUTAZIONE NON OLTRE LE 5 STELLE E UNA SPEDIZIONE RANDOM -->
 <div class="container">

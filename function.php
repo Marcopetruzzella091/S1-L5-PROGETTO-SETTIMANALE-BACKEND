@@ -11,9 +11,9 @@ echo 'Record aggiunto con successo!!!';
 
 
 
-function creaUsers($mysqli, $username, $passwordcript)
-{$sql = "INSERT INTO utenti (nome_utente, password) 
-  VALUES ('$username', '$passwordcript');";
+function creaUsers($mysqli, $username, $passwordcript, $image)
+{$sql = "INSERT INTO utenti (nome_utente, password, user_image) 
+  VALUES ('$username', '$passwordcript', '$image');";
 if (!$mysqli->query($sql)) {
 echo ($mysqli->connect_error);
 } else {  

@@ -53,7 +53,8 @@ if (!$mysqli->query($sql)) {
 $sql = 'CREATE TABLE IF NOT EXISTS utenti ( 
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome_utente VARCHAR(255) NOT NULL, 
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL,
+    user_image VARCHAR(255) NOT NULL
     
 )';
 if(!$mysqli->query($sql)) { die($mysqli->connect_error); }

@@ -97,11 +97,12 @@ if(isset($_REQUEST['action']) && $_REQUEST['action'] === 'inserisci') {
          else if (isset($_REQUEST['action'])&& $_REQUEST['action'] === 'registrazione') {
         
 
-        $username = strlen(trim(htmlspecialchars($_REQUEST['username']))) > 2 ? trim(htmlspecialchars($_REQUEST['username'])) : exit();
+        $username = strlen(trim(htmlspecialchars($_REQUEST['titolo']))) > 2 ? trim(htmlspecialchars($_REQUEST['titolo'])) : exit();
         $password = strlen(trim(htmlspecialchars($_REQUEST['password']))) > 2 ? trim(htmlspecialchars($_REQUEST['password'])) : exit();
         $passwordcript = password_hash($password , PASSWORD_DEFAULT);
+
         echo "fin qui tutto bene ";
-        creaUsers($mysqli, $username, $passwordcript);
+        creaUsers($mysqli, $username, $passwordcript, $image);
         exit(header('Location: index.php?action=reg-approved'));
 
 

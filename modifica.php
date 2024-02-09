@@ -1,5 +1,5 @@
 <?php 
-    include_once('Header.php'); 
+    
     require_once 'config.php';
     require_once 'function.php';
 
@@ -26,7 +26,7 @@
   
 
 
-    
+    include_once('Header.php'); 
     
 
     
