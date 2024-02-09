@@ -19,7 +19,28 @@
     
 
 <div class="container mt-5 mb-5">
+    
     <div class="row">
+    <?php 
+if(isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'reg-approved') ){ echo ' 
+    <div class="alert alert-success" role="alert">
+    Utente registrato con successo!
+</div> ' ;}
+    else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'bookmod') ){ echo ' 
+        <div class="alert alert-warning" role="alert">
+    Libro modificato con successo!</div> ' ;}
+        else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'bookdel') ){ echo ' 
+            <div class="alert alert-success" role="alert">
+            Libro eliminato con successo!</div>' ;}
+            else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'lib-inser') ){ echo ' 
+                <div class="alert alert-success"" role="alert">
+    Libro inserito con successo!</div>' ;}
+                else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'logged') ){ echo ' 
+                    <div class="alert alert-success" role="alert">
+    Logout effettuato!</div>' ;}
+                    else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'unregistred') ){ echo ' 
+                        <div class="alert alert-warning" role="alert">
+                        Solo gli utenti loggati possono effettuare operazioni di inserimento / modifica / eliminazione</div>' ;}?>
     <div class="d-flex justify-content-center row">
         <div class="col-md-10">
         <?php 
@@ -74,18 +95,7 @@
 
 
 <?php 
-if(isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'reg-approved') ){ echo ' 
-    <script>alert("Utente registrato con successo") </script>' ;}
-    else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'bookmod') ){ echo ' 
-        <script>alert("libro modificato con successo") </script>' ;}
-        else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'bookdel') ){ echo ' 
-            <script>alert("libro eliminato con successo") </script>' ;}
-            else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'lib-inser') ){ echo ' 
-                <script>alert("libro inserito con successo") </script>' ;}
-                else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'logged') ){ echo ' 
-                    <script>alert("logout effettuato") </script>' ;}
-                    else if (isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'unregistred') ){ echo ' 
-                        <script>alert("Solo gli utenti loggati possono effettuare operazioni di inserimento / modifica / eliminazione") </script>' ;}
+
                  
              
             
