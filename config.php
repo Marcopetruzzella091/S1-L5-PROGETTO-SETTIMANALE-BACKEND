@@ -72,6 +72,8 @@ $result = $mysqli->query("SELECT COUNT(*) as total FROM libri");
 $data = $result->fetch_assoc();
 
 if ($data['total'] == 0) {
+
+    echo '<script>alert("per non mostrare una pagina vuota, verranno caricati 3 libri di default")</script>';
     $sqlInsert = "INSERT INTO libri 
     (`titolo`, `autore`, `anno`, `genere`, `prezzo`, `prezzo_offerta`, `spedizione`, `numero_recensioni`, `stelle`, `immagine`, `descrizione`) 
 VALUES 
