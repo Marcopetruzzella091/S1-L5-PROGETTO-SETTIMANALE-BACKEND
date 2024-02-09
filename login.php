@@ -11,6 +11,10 @@
 
 <div class="container">
     <h1 class="text-center">Login </h1>
+    <?php if(isset($_REQUEST['action'])  && ($_REQUEST['action'] == 'logerr') ){ echo ' 
+    <div class="alert alert-danger" role="alert">
+   Credenziali errate!!
+</div> ' ;}?>
 <form class="py-5 w-50 m-auto"  method="post" action="Gestione.php?action=login" >
   <div class="mb-3">
     <label  class="form-label">Nome utente</label>

@@ -81,7 +81,8 @@ function login($mysqli, $username, $password) {
         session_write_close();
          exit(header('Location: index.php')); 
     } else {
-        echo 'Password errata!!';
+        
+        exit(header('Location: login.php?action=logerr'));
     }
 }
 
