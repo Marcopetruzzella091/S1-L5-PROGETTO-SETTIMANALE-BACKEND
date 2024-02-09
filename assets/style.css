@@ -67,3 +67,5 @@ a {
     border-radius: .2rem;
 }
 .navbar{padding: 1% 15% !important}
+
+span.offerta{text-decoration: line-through !important}

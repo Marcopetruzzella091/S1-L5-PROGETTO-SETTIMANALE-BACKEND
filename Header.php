@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -25,13 +26,33 @@
       
       Inserisci Nuovo
     </a></div>
+   <?php
+   if(isset($_SESSION['userLogin'])){
+    
+     echo "<div><a class='navbar-brand' href='#'>
+      
+    benvenuto ". $_SESSION['userLogin']['nome_utente'].  "
+  </a><a class='navbar-brand' href='Gestione.php?action=logout
+'>
+    
+    Logout
+  </a> </div>
+</div>" ;
+     
+     
+     ;
+   }
    
-    <div><a class="navbar-brand" href="#">
+   else{ echo " <div><a class='navbar-brand' href='login.php'>
       
-      Login 
-    </a><a class="navbar-brand" href="#">
-      
-      Register 
-    </a> </div>
-  </div>
+    Login 
+  </a><a class='navbar-brand' href='registrazione.php
+'>
+    
+    Register 
+  </a> </div>
+</div>" ;}
+   
+   ?>
+   
 </nav>

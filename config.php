@@ -41,12 +41,21 @@ $sql = 'CREATE TABLE IF NOT EXISTS libri (
     `spedizione` VARCHAR(100) NOT NULL,
     `numero_recensioni` INT NOT NULL,
     `stelle` INT NOT NULL,
-    `immagine` VARCHAR(255)  NULL 
+    `immagine` VARCHAR(255) NULL, 
+    `descrizione` VARCHAR(255) NULL
 )';
 
 if (!$mysqli->query($sql)) {
     die($mysqli->connect_error);
 }
 
+
+$sql = 'CREATE TABLE IF NOT EXISTS utenti ( 
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome_utente VARCHAR(255) NOT NULL, 
+    password VARCHAR(255) NOT NULL
+    
+)';
+if(!$mysqli->query($sql)) { die($mysqli->connect_error); }
 
 ?>

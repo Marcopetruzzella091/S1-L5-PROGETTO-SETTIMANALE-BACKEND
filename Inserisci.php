@@ -1,6 +1,23 @@
 <?php 
  include_once('Header.php'); 
  include_once('config.php'); 
+
+ session_start();
+
+ if(!isset($_SESSION['userLogin'])){
+  
+  exit(header('Location: index.php?action=unregistred'))
+    
+ ;}
+   
+
+
+ session_write_close(); 
+ 
+ ?>
+
+
+
     
 ?>
 <!-- NEL FORM FACCIO UN PRIMO CONTROLLO SUI DATI ASSICURANDOMI DI GUIDARE L'UTENTE NELL'INSERIMENTO CORRETTO
@@ -48,8 +65,13 @@ QUINDI NON SARA' POSSIBILI INSERIRE UN ANNO OLTRE IL 2024, UN PREZZO NON DECIMAL
     </div>
     <div class="form-group">
       <label for="stelle">Stelle:</label>
-      <input type="number" min="1" max="5" class="form-control my-1" id="anno" name="stelle" placeholder="Inserisci l'anno di pubblicazione"  >
+      <input type="number" min="1" max="5" class="form-control my-1" id="anno" name="stelle" placeholder="Inserisci un numero di stelle da 1 a 5"  >
     </div>
+    <div class="form-group">
+      <label for="titolo">descrizione:</label>
+      <input type="text" class="form-control my-1" id="titolo" name="descrizione" placeholder="Inserisci la descrizione" >
+    </div>
+
     <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
                 <input type="file" class="form-control" id="image" placeholder="Image..." name="immagine">
